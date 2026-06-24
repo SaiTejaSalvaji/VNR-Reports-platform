@@ -1,0 +1,12 @@
+*.aux
+*.fdb_latexmk
+*.gx
+.out
+*.log
+batch_3_main.synctex
+
+batch_3_main.fls
+batch_3_main.log
+batch_3_main.out
+batch_3_main.synctex.gz
+batch_3_main

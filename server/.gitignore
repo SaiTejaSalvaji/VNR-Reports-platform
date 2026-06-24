@@ -1,0 +1,22 @@
+node_modules/
+.claude/
+.env
+*.local
+dist
+*.log
+
+# Compiled JavaScript files (TypeScript compiles to root)
+/*.js
+/*.js.map
+/configs/*.js
+/configs/*.js.map
+/controllers/*.js
+/controllers/*.js.map
+/middleware/*.js
+/middleware/*.js.map
+/routes/*.js
+/routes/*.js.map
+/utils/*.js
+/utils/*.js.map
+/tests/*.js
+/tests/*.js.map

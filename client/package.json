@@ -1,0 +1,51 @@
+{
+  "name": "vnrreports",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "server": "node server/server.js",
+    "dev:all": "concurrently \"npm run server\" \"npm run dev\""
+  },
+  "dependencies": {
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@tailwindcss/vite": "^4.1.11",
+    "@tiptap/extension-table": "^3.17.1",
+    "@tiptap/extension-table-cell": "^3.17.1",
+    "@tiptap/extension-table-header": "^3.17.1",
+    "@tiptap/extension-table-row": "^3.17.1",
+    "@tiptap/extension-underline": "^3.17.1",
+    "@tiptap/react": "^3.17.1",
+    "@tiptap/starter-kit": "^3.17.1",
+    "axios": "^1.10.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.525.0",
+    "react": "^19.1.0",
+    "react-countup": "^6.5.3",
+    "react-dom": "^19.1.0",
+    "react-hot-toast": "^2.6.0",
+    "react-router-dom": "^7.7.0",
+    "recharts": "^3.3.0",
+    "tailwind-merge": "^3.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "concurrently": "^9.2.0",
+    "eslint": "^9.30.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.35.1",
+    "vite": "^7.0.4"
+  }
+}

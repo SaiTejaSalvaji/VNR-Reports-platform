@@ -1,0 +1,25 @@
+{
+  "functions": [
+    {
+      "source": ".",
+      "codebase": "default",
+      "runtime": "nodejs24",
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run build"
+      ],
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local",
+        ".env",
+        ".env.*",
+        "src",
+        "**/*.ts",
+        "tsconfig.json",
+        ".claude"
+      ]
+    }
+  ]
+}

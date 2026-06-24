@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    /* Output & Module Handling */
+    "target": "ES2020",                        /* Output modern but Node-safe JS */
+    "module": "CommonJS",                      /* Use CommonJS for Node.js */
+    "outDir": "./dist",                        /* Compiled files go here */
+    "rootDir": "./src",                        /* Source code location */
+
+    /* Debugging & Dev Experience */
+    "sourceMap": true,                         /* Generate .map files for debugging */
+    "esModuleInterop": true,                   /* Allow default imports from CommonJS */
+    "resolveJsonModule": true,                 /* Allow importing .json files */
+    "skipLibCheck": true,                       /* Skip type checks for node_modules */
+    "strict": true,                            /* Enable all strict type-checking */
+    "forceConsistentCasingInFileNames": true,  /* Enforce consistent imports */
+
+    /* Module Resolution */
+    "moduleResolution": "node",                /* Node.js module resolution */
+    "allowSyntheticDefaultImports": true,      /* Support default import syntax */
+    "types": ["node"],                         /* Include Node.js type definitions */
+
+    /* Advanced */
+    "noImplicitAny": true,                     /* Warn when 'any' is used implicitly */
+    "noUnusedLocals": false,                    /* Warn on unused variables */
+    "noUnusedParameters": false,                /* Warn on unused function params */
+    "noEmitOnError": false                     /* Still emit JS even if there are TS errors */
+  },
+  "include": ["src/**/*"],                     /* Compile all files in src */
+  "exclude": ["node_modules", "dist"]          /* Ignore build output & dependencies */
+}

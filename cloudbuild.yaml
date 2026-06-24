@@ -1,0 +1,52 @@
+steps:
+  - name: "node:22"
+    entrypoint: "npm"
+    args: ["install", "firebase-tools"]
+    dir: "."
+    waitFor: ["-"]
+    id: "install-tools"
+
+  - name: "node:22"
+    entrypoint: "npm"
+    args: ["install"]
+    dir: "server"
+    waitFor: ["-"]
+    id: "install-server"
+
+  - name: "node:22"
+    entrypoint: "npm"
+    args: ["install"]
+    dir: "client"
+    waitFor: ["-"]
+    id: "install-client"
+
+  - name: "node:22"
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        /workspace/node_modules/.bin/firebase deploy --only functions --project vnrvjiet-monthly-reports --force
+    dir: "server"
+    waitFor: ["install-server", "install-tools"]
+    id: "deploy-functions"
+
+  - name: "node:22"
+    entrypoint: "npm"
+    args: ["run", "build"]
+    dir: "client"
+    waitFor: ["install-client"]
+    id: "build-client"
+
+  - name: "node:22"
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        /workspace/node_modules/.bin/firebase deploy --only hosting --project vnrvjiet-monthly-reports --force
+    dir: "client"
+    waitFor: ["build-client", "install-tools"]
+    id: "deploy-hosting"
+
+timeout: "1200s"
+options:
+  default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET

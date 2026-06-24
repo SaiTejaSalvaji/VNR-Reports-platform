@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "clean-node-modules",
+      "type": "shell",
+      "command": "rmdir /s /q node_modules && del package-lock.json",
+      "problemMatcher": []
+    },
+    {
+      "label": "run-client",
+      "type": "shell",
+      "command": "cd client && npm i && npm run dev",
+      "problemMatcher": []
+    },
+    {
+      "label": "run-server",
+      "type": "shell",
+      "command": "cd server && npm i && npm run dev",
+      "problemMatcher": []
+    },
+    {
+        
+      "label": "start-all",
+      "dependsOn": ["run-client", "run-server"],
+      "dependsOrder": "parallel",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }   
+    }
+  ]
+}
